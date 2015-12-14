@@ -15,13 +15,12 @@ request(source, function (error, response, body) {
   if (!error && response.statusCode == 200) {
 
 		page = cheerio.load(body);
-
   	issueNumber  = getIssueNumber(page);
 
-  	for (var i = 1; i <= 2; i++) {
+		for (var i = 1; i <= issueNumber; i++) {
 
 			(function(i){
-	  		request(source + i, function (error, response, body) {
+				request(source + i, function (error, response, body) {
 
 				  if (!error && response.statusCode == 200) {
 
@@ -36,10 +35,10 @@ request(source, function (error, response, body) {
 			})(i);
 
 		};
-
   }
-
 })
+
+
 
 function saveImage(path, i){
 

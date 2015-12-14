@@ -2,7 +2,7 @@
   "name": "comics",
   "version": "0.1.0",
   "description": "\"NodeJS parser for comics\"",
-  "main": "server.js",
+  "main": "app.js",
   "dependencies": {
     "cheerio": "^0.19.0",
     "request": "^2.57.0"
@@ -10,7 +10,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node app"
   },
   "repository": {
     "type": "git",
